@@ -17,7 +17,7 @@ minetest.register_entity("dmobs:butterfly", {
 	textures = {"dmobs_butterfly.png",},
 	visual_size = {x=0.3, y=0.3},
 	on_activate = function(self)
-		num = math.random(1,4)
+		local num = math.random(1,4)
 		self.object:set_properties({textures = {"dmobs_butterfly"..num..".png",},})
 		self.object:set_animation({x=1, y=10}, 20, 0)
 		self.object:setyaw(math.pi+num)
